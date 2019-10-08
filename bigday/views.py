@@ -6,4 +6,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'bigday/index.html')
+    return render(request, 'bigday/sample.html')
