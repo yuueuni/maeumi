@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Maeum</title>
+
+  <!-- Bootstrap core CSS -->
+  {% load static %}
+  <link href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  {% load static %}
+  <link href="../../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+
+
+  <!-- Custom styles for this template -->
+  {% load static %}
+  <link href="../../static/grayscale.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../static/style.css">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div style="font-family: 'Gaegu', cursive !important;" class="container">
+      <a style="font-size: -webkit-xxx-large;" class="navbar-brand js-scroll-trigger" href="#page-top">마음이</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="#about">마음이소개</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="#projects">그림상담</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="#signup">최종리포트</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header style="font-family: 'Gaegu', cursive !important;" class="masthead">
+    <div style="display:flex; justify-content: space-around;" class="container d-flex h-100 align-items-center">
+      <div style="margin: 0px !important; display:block;" class="mx-auto text-center">
+        <h2 style="text-align: center; margin: 0px 0px 20px!important; color: black !important; font-size: xx-large;" class="text-white-50 mx-auto mt-2 mb-5">아이들의 마음이, <strong>다</strong> 다르다.</h2>
+        {% load static %}
+        <img style="display: block; width: 300px; height: 300px; margin: 50px;" src="../../static/image/crayons.png">
+        <h2 style="text-align: center; margin: 20px 0px !important; color: black !important; font-size: xx-large;" class="text-white-50 mx-auto mt-2 mb-5">아이들의 마음에, <strong>다다르다</strong>.</h2>
+        <a style="margin-top: 20px;" href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section style="font-family: 'Gaegu', cursive;" id="about" class="projects-section bg-light">
+    <div class="container">
+
+      <!-- Featured Project Row -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          {% load static %}
+          <img class="img-fluid mb-3 mb-lg-0" src="../../static/img/bg-masthead.jpg" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>Shoreline</h4>
+            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project One Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          {% load static %}
+          <img class="img-fluid" src="../../static/img/demo-image-01.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Misty</h4>
+                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          {% load static %}
+          <img class="img-fluid" src="../../static/img/demo-image-02.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">Mountains</h4>
+                <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section style="font-family: 'Gaegu', cursive;" id="projects" class="about-section text-center">
+    <h2 style="margin-bottom: 1rem;"><strong>Step 2.</strong>그림 상담</h2>
+    <div style="display: flex; justify-content: center">
+      <div style="width: 400px; height: 400px;">
+        <h4>그림 그리는 방법</h4>
+        <div style="display: block; border: 1px solid gray;">
+          <p> 그림 그리는 설명 ~~~~ </p>
+        </div>
+      </div>
+      <div style="display: block; width: 400px; height: 400px;">
+        <div style="margin: 0 !important;">
+          <form action="" method="">
+            <h4>파일 업로드</h4>
+            <input style="margin: 5px 0;" type='file' id="imgInp" />
+            <img style="width: 350px; height: 350px;" id="foo"src="#" />
+          </form>
+        </div>
+        <nav style="text-align: center; margin-top: 5px;">
+          <input class="btn btn-info" style="background-color:#494d4e; border-color:#494d4e;" type="submit" value="등록" >
+        </nav>
+      </div>
+    </div>
+
+    <div style="display:block;">
+        <div class="login-wrap">
+            <div class="login-html">
+                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+                <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+                <div class="login-form">
+                    <div class="sign-in-htm">
+                        <div class="group">
+                            <label for="user" class="label">Username</label>
+                            <input id="user" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Password</label>
+                            <input id="pass" type="password" class="input" data-type="password">
+                        </div>
+                        <div class="group">
+                            <input id="check" type="checkbox" class="check" checked>
+                            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign In">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <a href="#forgot">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="sign-up-htm">
+                        <div class="group">
+                            <label for="user" class="label">Username</label>
+                            <input id="user" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Password</label>
+                            <input id="pass" type="password" class="input" data-type="password">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Repeat Password</label>
+                            <input id="pass" type="password" class="input" data-type="password">
+                        </div>
+                        <div class="group">
+                            <label for="pass" class="label">Email Address</label>
+                            <input id="pass" type="text" class="input">
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Sign Up">
+                        </div>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <label for="tab-1">Already Member?</label>>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- Signup Section -->
+  <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+
+          <form class="form-inline d-flex">
+            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
+            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section bg-black">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Address</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="#">hello@yourdomain.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Phone</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">+1 (555) 902-8832</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social d-flex justify-content-center">
+        <a href="#" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Your Website 2019
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  {% load static %}
+  <script src="../../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="../../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="../../static/js/grayscale.min.js"></script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+          /*
+          var defaults = {
+          containerID: 'toTop', // fading element id
+          containerHoverID: 'toTopHover', // fading element hover id
+          scrollSpeed: 1200,
+          easingType: 'linear'
+          };
+          */
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              reader.onload = function(e) {
+                  $('#foo').attr('src', e.target.result);
+              }
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+
+      $("#imgInp").change(function() {
+          readURL(this)
+      });
+  </script>
+
+</body>
+
+</html>
