@@ -11,3 +11,7 @@ def home(request):
 
 def test(request):
     return render(request, 'bigday/testView.html')
+
+
+def report(request):
+    return render(request, 'bigday/finalReport.html')

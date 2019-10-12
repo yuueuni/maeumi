@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Maeum</title>
+
+  <!-- Bootstrap core CSS -->
+  {% load static %}
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  {% load static %}
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+
+
+
+  <!-- Custom styles for this template -->
+  {% load static %}
+  <link href="{% static 'grayscale.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div style="font-family: 'Gaegu', cursive !important;" class="container">
+      <a style="font-size: -webkit-xxx-large;" class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">마음이</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'home' %}">마음이소개</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'test' %}">그림상담 </a>
+          </li>
+          <li class="nav-item">
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'report' %}">최종리포트 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section style="font-family: 'Gaegu', cursive;" class="signup-section">
+      <div style="margin-top: 2rem;" class="testView">
+          <h1 style="text-align: center;"><strong>마음이</strong>님의 그림검사 최종 결과입니다.</h1>
+
+          <br>
+
+          <div class="row">
+              <div style="text-align: center;" class="col-md-4">
+                  <p>이미지 미리보기</p>
+              </div>
+              <div style="text-align: left;" class="col-md-8">
+                  <h3><strong>나무</strong> 그림은 ...</h3>
+                  <h3><strong>집</strong> 그림은 ...</h3>
+                  <h3><strong>사람</strong> 그림은 ...</h3>
+              </div>
+          </div>
+
+          <br>
+
+          <div id="donutchart" style="width: 900px; height: 500px;"></div>
+
+          <hr>
+
+          <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+      </div>
+
+
+  </section>
+<!-- Bootstrap core JavaScript -->
+{% load static %}
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Plugin JavaScript -->
+<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Custom scripts for this template -->
+<script src="{% static 'js/grayscale.min.js' %}"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+
+<!-- google donut chart -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['happiness',     11],
+          ['sadness',        2],
+          ['disgust',        2],
+          ['fear',           2],
+          ['surprise',       7]
+        ]);
+
+        var options = {
+          title: '심리 상태 분석',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+  <!-- google combo chart -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],
+          ['2004/05',  165,      938,         522,             998,           450,      614.6],
+          ['2005/06',  135,      1120,        599,             1268,          288,      682],
+          ['2006/07',  157,      1167,        587,             807,           397,      623],
+          ['2007/08',  139,      1110,        615,             968,           215,      609.4],
+          ['2008/09',  136,      691,         629,             1026,          366,      569.6]
+        ]);
+
+        var options = {
+          title : 'Monthly Coffee Production by Country',
+          vAxis: {title: 'Cups'},
+          hAxis: {title: 'Month'},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}}        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+</body>

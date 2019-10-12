@@ -12,18 +12,18 @@
 
   <!-- Bootstrap core CSS -->
   {% load static %}
-  <link href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
   {% load static %}
-  <link href="../../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
 
 
 
   <!-- Custom styles for this template -->
   {% load static %}
-  <link href="../../static/grayscale.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../static/style.css">
+  <link href="{% static 'grayscale.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
 
 
   <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
@@ -51,7 +51,7 @@
             <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'test' %}">그림상담 </a>
           </li>
           <li class="nav-item">
-            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="#signup">최종리포트 </a>
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'report' %}">최종리포트 </a>
           </li>
         </ul>
       </div>
@@ -64,7 +64,7 @@
       <div style="margin: 0px !important; display:block;" class="mx-auto text-center">
         <h2 style="text-align: center; margin: 0px 0px 20px!important; color: black !important; font-size: xx-large;" class="text-white-50 mx-auto mt-2 mb-5">아이들의 마음이, <strong>다</strong> 다르다.</h2>
         {% load static %}
-        <img style="display: block; width: 300px; height: 300px; margin: 50px;" src="../../static/image/crayons.png">
+        <img style="display: block; width: 300px; height: 300px; margin: 50px;" src="{% static 'image/crayons.png' %}">
         <h2 style="text-align: center; margin: 20px 0px !important; color: black !important; font-size: xx-large;" class="text-white-50 mx-auto mt-2 mb-5">아이들의 마음에, <strong>다다르다</strong>.</h2>
         <a style="margin-top: 20px;" href="#loginup" class="btn btn-primary js-scroll-trigger">Get Started</a>
       </div>
@@ -279,15 +279,15 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  {% load static %}
-  <script src="../../static/vendor/jquery/jquery.min.js"></script>
-  <script src="../../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+{% load static %}
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="../../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="../../static/js/grayscale.min.js"></script>
+<!-- Custom scripts for this template -->
+<script src="{% static 'js/grayscale.min.js' %}"></script>
 
 
   <script type="text/javascript">
