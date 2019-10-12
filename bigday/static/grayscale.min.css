@@ -164,11 +164,11 @@
 
 .about-section {
 	padding: 5rem 0 15rem;
-	background: #c0e0f3;
+	background: #c0e8ffd1;
 }
 
 .about-section p {
-	margin-bottom: 5rem
+	margin-bottom: .5rem
 }
 
 .projects-section {
@@ -246,7 +246,7 @@
 }
 
 .contact-section .social {
-	margin-top: 5rem
+	margin: 2.5rem 0;
 }
 
 .contact-section .social a {

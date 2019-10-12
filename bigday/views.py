@@ -5,5 +5,9 @@ from django.shortcuts import render
 
 
 # Create your views here.
-def index(request):
-    return render(request, 'bigday/sample.html')
+def home(request):
+    return render(request, 'bigday/home.html')
+
+
+def test(request):
+    return render(request, 'bigday/testView.html')
