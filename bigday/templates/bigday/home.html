@@ -12,18 +12,18 @@
 
   <!-- Bootstrap core CSS -->
   {% load static %}
-  <link href="../../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
   {% load static %}
-  <link href="../../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
 
 
 
   <!-- Custom styles for this template -->
   {% load static %}
-  <link href="../../static/grayscale.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../static/style.css">
+  <link href="{% static 'grayscale.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
 
 
   <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
@@ -48,10 +48,10 @@
             <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="#about">마음이소개</a>
           </li>
           <li class="nav-item">
-            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="#projects">그림상담 </a>
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'test' %}">그림상담 </a>
           </li>
           <li class="nav-item">
-            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="#signup">최종리포트 </a>
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'report' %}">최종리포트 </a>
           </li>
         </ul>
       </div>
@@ -59,23 +59,23 @@
   </nav>
 
   <!-- Header -->
-  <header style="font-family: 'Gaegu', cursive !important;" class="masthead">
+  <section style="font-family: 'Gaegu', cursive !important;" class="masthead">
     <div style="display:flex; justify-content: space-around;" class="container d-flex h-100 align-items-center">
       <div style="margin: 0px !important; display:block;" class="mx-auto text-center">
         <h2 style="text-align: center; margin: 0px 0px 20px!important; color: black !important; font-size: xx-large;" class="text-white-50 mx-auto mt-2 mb-5">아이들의 마음이, <strong>다</strong> 다르다.</h2>
         {% load static %}
-        <img style="display: block; width: 300px; height: 300px; margin: 50px;" src="../../static/image/crayons.png">
+        <img style="display: block; width: 300px; height: 300px; margin: 50px;" src="{% static 'image/crayons.png' %}">
         <h2 style="text-align: center; margin: 20px 0px !important; color: black !important; font-size: xx-large;" class="text-white-50 mx-auto mt-2 mb-5">아이들의 마음에, <strong>다다르다</strong>.</h2>
-        <a style="margin-top: 20px;" href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+        <a style="margin-top: 20px;" href="#loginup" class="btn btn-primary js-scroll-trigger">Get Started</a>
       </div>
 
     </div>
-  </header>
+  </section>
 
   <!-- About Section -->
   <section style="font-family: 'Gaegu', cursive;" id="about" class="projects-section bg-light">
     <div class="container">
-
+        <p style="text-align: center; font-size: -webkit-xxx-large;">마음이</p>
       <!-- Featured Project Row -->
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
@@ -131,29 +131,8 @@
   </section>
 
   <!-- Projects Section -->
-  <section style="font-family: 'Gaegu', cursive;" id="projects" class="about-section text-center">
-    <h2 style="margin-bottom: 1rem;"><strong>Step 2.</strong>그림 상담</h2>
-    <div style="display: flex; justify-content: center">
-      <div style="width: 400px; height: 400px;">
-        <h4>그림 그리는 방법</h4>
-        <div style="display: block; border: 1px solid gray;">
-          <p> 그림 그리는 설명 ~~~~ </p>
-        </div>
-      </div>
-      <div style="display: block; width: 400px; height: 400px;">
-        <div style="margin: 0 !important;">
-          <form action="" method="">
-            <h4>파일 업로드</h4>
-            <input style="margin: 5px 0;" type='file' id="imgInp" />
-            <img style="width: 350px; height: 350px;" id="foo"src="#" />
-          </form>
-        </div>
-        <nav style="text-align: center; margin-top: 5px;">
-          <input class="btn btn-info" style="background-color:#494d4e; border-color:#494d4e;" type="submit" value="등록" >
-        </nav>
-      </div>
-    </div>
-
+  <section style="font-family: 'Gaegu', cursive;" id="loginup" class="about-section text-center">
+      <h1 style="text-align: center;">로그인 & 회원가입</h1>
     <div style="display:block;">
         <div class="login-wrap">
             <div class="login-html">
@@ -274,38 +253,41 @@
         </div>
       </div>
 
-      <div class="social d-flex justify-content-center">
-        <a href="#" class="mx-2">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="mx-2">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="mx-2">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
+
 
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">
-    <div class="container">
-      Copyright &copy; Your Website 2019
-    </div>
+      <section class="contact-section bg-black">
+      <div class="container">
+          <div class="social d-flex justify-content-center">
+            <a href="#" class="mx-2">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="mx-2">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="mx-2">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <p>Copyright &copy; Your Website 2019</p>
+      </div>
+      </section>
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  {% load static %}
-  <script src="../../static/vendor/jquery/jquery.min.js"></script>
-  <script src="../../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+{% load static %}
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="../../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="../../static/js/grayscale.min.js"></script>
+<!-- Custom scripts for this template -->
+<script src="{% static 'js/grayscale.min.js' %}"></script>
 
 
   <script type="text/javascript">
@@ -322,22 +304,6 @@
     });
   </script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script type="text/javascript">
-      function readURL(input) {
-          if (input.files && input.files[0]) {
-              var reader = new FileReader();
-              reader.onload = function(e) {
-                  $('#foo').attr('src', e.target.result);
-              }
-              reader.readAsDataURL(input.files[0]);
-          }
-      }
-
-      $("#imgInp").change(function() {
-          readURL(this)
-      });
-  </script>
 
 </body>
 

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Maeum</title>
+
+  <!-- Bootstrap core CSS -->
+  {% load static %}
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  {% load static %}
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+
+
+
+  <!-- Custom styles for this template -->
+  {% load static %}
+  <link href="{% static 'grayscale.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div style="font-family: 'Gaegu', cursive !important;" class="container">
+      <a style="font-size: -webkit-xxx-large;" class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">마음이</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'home' %}">마음이소개</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'test' %}">그림상담 </a>
+          </li>
+          <li class="nav-item">
+            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'report' %}">최종리포트 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Projects Section -->
+  <section style="font-family: 'Gaegu', cursive;" id="projects" class="about-section text-center">
+      <div style="margin-top: 2rem;" class="testView">
+        <h1><strong>Step 1.</strong> 기본정보</h1>
+        <div class="addInfo">
+            <h3>Q1. 그림을 그린 아이의 <strong><font color="#ff008d">이름(닉네임)</font></strong>을 적어주세요.</h3>
+            <input type="text" placeholder="이름">
+
+            <h3>Q2. 아이의 <strong><font color="#ff008d">성별</font></strong>을 선택해주세요.</h3>
+            <input type="text" placeholder="이름">
+
+            <h3>Q3. 아이의 <strong><font color="#ff008d">나이대</font></strong>를 선택해주세요.</h3>
+            <input type="text" placeholder="이름">
+        </div>
+          {% load static %}
+          <img style="width:100px; height: 100px; padding-left:.5rem;" src="{% static 'image/fly.png' %}">
+      </div>
+
+      <hr>
+
+      <div class="testView">
+        <h1><strong>Step 2.</strong> 그림 상담</h1>
+        <div style="display: flex; justify-content: space-evenly;">
+          <div>
+            <h4>그림 그리는 방법</h4>
+            <div style="display: block; border: 1px solid gray;">
+              <p> 그림 그리는 설명 ~~~~ </p>
+            </div>
+          </div>
+          <div style="display: block; width: 400px;">
+            <div style="margin: 0 !important;">
+              <form action="" method="">
+                <h4>파일 업로드</h4>
+                  <div style="margin-bottom: 10px;" class="custom-file">
+                    <input type="file" class="custom-file-input" id="imgInp">
+                    <label class="custom-file-label" for="imgInp">Choose file</label>
+                  </div>
+                <img style="width: 350px; height: 350px;" id="foo"src="#" />
+              </form>
+            </div>
+            <nav style="text-align: center; margin-top: 5px;">
+              <input class="btn btn-info" style="background-color:#494d4e; border-color:#494d4e;" type="submit" value="등록" >
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="testView">
+        <h1><strong>Step 2.</strong> 그림 상담</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <p>이미지 미리보기</p>
+                <form>
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="switch1">
+                    <label class="custom-control-label" for="switch1">해당 그림이 나무가 맞나요?</label>
+                  </div>
+                </form>
+                  <input type="radio" class="form-check-input" name="optradio">
+            </div>
+
+            <div class="col-md-4">
+                <p>이미지 미리보기</p>
+                <form>
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="switch2">
+                    <label class="custom-control-label" for="switch2">해당 그림이 집이 맞나요?</label>
+                  </div>
+                </form>
+
+                <input type="checkbox" class="form-check-input" value="">
+            </div>
+
+            <div class="col-md-4">
+                <p>이미지 미리보기</p>
+                <form>
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="switch3">
+                    <label class="custom-control-label" for="switch3">해당 그림이 사람이 맞나요?</label>
+                  </div>
+                </form>
+            </div>
+
+        </div>
+      </div>
+
+      <div class="testView">
+        <h1><strong>Step 3.</strong> 인터뷰</h1>
+          <div class="row">
+              <div class="col-md-5">
+                  <p>이미지 미리보기</p>
+              </div>
+              <div style="text-align: left;" class="col-md-7">
+                  <h3>Q1. 이 집은 누구의 집인가요?</h3>
+                  <input type="text" style="margin: 0 0 2rem 1.5rem; padding-left: .5rem; width:50%;">
+                  <h3>Q2. 나중에 이 나무는 어떻게 될까요?</h3>
+                  <input type="text" style="margin: 0 0 2rem 1.5rem; padding-left: .5rem; width:50%;">
+                  <h3>Q3. 지금 이 사람의 기분은 어떤가요?</h3>
+                  <input type="text" style="margin: 0 0 2rem 1.5rem; padding-left: .5rem; width:50%;">
+              </div>
+          </div>
+      </div>
+
+      <button class="btn btn-info">제출</button>
+      <br>
+      <br>
+
+        <button class="btn btn-info" disabled>
+          <span class="spinner-border spinner-border-sm"></span>
+          Loading..
+        </button>
+
+
+  </section>
+
+   <footer class="bg-black small text-center text-white-50">
+      <section class="contact-section bg-black">
+      <div class="container">
+          <div class="social d-flex justify-content-center">
+            <a href="#" class="mx-2">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="mx-2">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="mx-2">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <p>Copyright &copy; Your Website 2019</p>
+      </div>
+      </section>
+  </footer>
+
+<!-- Bootstrap core JavaScript -->
+{% load static %}
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Plugin JavaScript -->
+<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Custom scripts for this template -->
+<script src="{% static 'js/grayscale.min.js' %}"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+      /*
+      var defaults = {
+      containerID: 'toTop', // fading element id
+      containerHoverID: 'toTopHover', // fading element hover id
+      scrollSpeed: 1200,
+      easingType: 'linear'
+      };
+      */
+$().UItoTop({ easingType: 'easeOutQuart' });
+});
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  function readURL(input) {
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function(e) {
+              $('#foo').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+
+  $("#imgInp").change(function() {
+      readURL(this)
+  });
+</script>
+
+<script>
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+
+</body>
+</html>
