@@ -163,7 +163,7 @@
 }
 
 .about-section {
-	padding: 5rem 0 15rem;
+	padding: 5rem 0 10rem;
 	background: #c0e8ffd1;
 }
 
@@ -222,10 +222,6 @@
 	border: 0
 }
 
-.contact-section {
-	padding: 5rem 0 0
-}
-
 .contact-section .card {
 	border: 0;
 	border-bottom: .25rem solid #64a19d
@@ -244,18 +240,14 @@
 	width: 3rem
 }
 
-.contact-section .social {
-	margin: 2.5rem 0;
-}
-
 .contact-section .social a {
 	text-align: center;
 	height: 3rem;
 	width: 3rem;
-	background: rgba(255, 255, 255, .1);
+	background: #6a8098;
 	border-radius: 100%;
 	line-height: 3rem;
-	color: rgba(255, 255, 255, .3)
+	color: white;
 }
 
 .contact-section .social a:hover {
@@ -281,7 +273,7 @@ a:focus, a:hover {
 }
 
 .bg-black {
-	background-color: #161616 !important
+	background-color: #fff !important
 }
 
 .bg-primary {
