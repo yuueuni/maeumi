@@ -60,54 +60,107 @@
 <!-- Projects Section -->
   <section style="font-family: 'Gaegu', cursive;" id="projects" class="about-section text-center">
       <div style="margin-top: 2rem;" class="testView">
-        <h1><strong>Step 1.</strong> 기본정보</h1>
+        <h1><strong>Step 1. 기본정보</strong></h1>
         <div class="addInfo">
             <h3>Q1. 그림을 그린 아이의 <strong><font color="#ff008d">이름(닉네임)</font></strong>을 적어주세요.</h3>
             <input type="text" placeholder="이름">
 
             <h3>Q2. 아이의 <strong><font color="#ff008d">성별</font></strong>을 선택해주세요.</h3>
-            <input type="text" placeholder="이름">
+            <div>
+                <input type="checkbox" class="form-check-input" value="">
+                <label>남아</label>
+            </div>
+            <div>
+                <input type="checkbox" class="form-check-input" value="">
+                <label>여아</label>
+            </div>
+
 
             <h3>Q3. 아이의 <strong><font color="#ff008d">나이대</font></strong>를 선택해주세요.</h3>
-            <input type="text" placeholder="이름">
+            <div>
+                <input type="checkbox" class="form-check-input" value="">
+                <label>5 - 7세</label>
+            </div>
+            <div>
+                <input type="checkbox" class="form-check-input" value="">
+                <label>8 - 10세</label>
+            </div>
+            <div>
+                <input type="checkbox" class="form-check-input" value="">
+                <label>11 - 13세</label>
+            </div>
+
         </div>
-          {% load static %}
-          <img style="width:100px; height: 100px; padding-left:.5rem;" src="{% static 'image/fly.png' %}">
       </div>
 
       <hr>
 
       <div class="testView">
-        <h1><strong>Step 2.</strong> 그림 상담</h1>
-        <div style="display: flex; justify-content: space-evenly;">
+        <h1><strong>Step 2. 그림 상담</strong></h1>
           <div>
             <h4>그림 그리는 방법</h4>
             <div style="display: block; border: 1px solid gray;">
               <p> 그림 그리는 설명 ~~~~ </p>
             </div>
-          </div>
-          <div style="display: block; width: 400px;">
-            <div style="margin: 0 !important;">
-              <form action="" method="">
-                <h4>파일 업로드</h4>
-                  <div style="margin-bottom: 10px;" class="custom-file">
-                    <input type="file" class="custom-file-input" id="imgInp">
-                    <label class="custom-file-label" for="imgInp">Choose file</label>
-                  </div>
-                <img style="width: 350px; height: 350px;" id="foo"src="#" />
-              </form>
+              <br>
+              <h4>파일 업로드</h4>
+              <br>
+            <div style="display: flex; justify-content: space-evenly;">
+                <div style="display: block; width: 400px;">
+                    <div class="uploadPhoto">
+                        <div style="margin: 0 !important;">
+                            <form action="" method="">
+                                <h4>나무</h4>
+                                <div style="margin-bottom: 10px;" class="custom-file">
+                                    <input  previewnum="foo1" type="file" class="custom-file-input" id="imgInp1">
+                                    <label class="custom-file-label" for="imgInp1">Choose file</label>
+                                </div>
+                                <img style="width: 350px; height: 350px;" id="foo1"src="#" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: block; width: 400px;">
+                    <div class="uploadPhoto">
+                        <div style="margin: 0 !important;">
+                            <form action="" method="">
+                                <h4>사람</h4>
+                                <div style="margin-bottom: 10px;" class="custom-file">
+                                    <input previewnum="foo2" type="file" class="custom-file-input" id="imgInp2">
+                                    <label class="custom-file-label" for="imgInp2">Choose file</label>
+                                </div>
+                                <img style="width: 350px; height: 350px;" id="foo2"src="#" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: block; width: 400px;">
+                    <div class="uploadPhoto">
+                        <div style="margin: 0 !important;">
+                            <form action="" method="">
+                                <h4>집</h4>
+                                <div style="margin-bottom: 10px;" class="custom-file">
+                                    <input previewnum="foo3" type="file" class="custom-file-input" id="imgInp3">
+                                    <label class="custom-file-label" for="imgInp3">Choose file</label>
+                                </div>
+                                <img style="width: 350px; height: 350px;" id="foo3"src="#" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <nav style="text-align: center; margin-top: 5px;">
-              <input class="btn btn-info" style="background-color:#494d4e; border-color:#494d4e;" type="submit" value="등록" >
-            </nav>
           </div>
-        </div>
+          <nav style="text-align: center; margin-top: 5px;">
+              <input class="btn btn-info" style="background-color:#494d4e; border-color:#494d4e;" type="submit" value="등록" >
+          </nav>
       </div>
 
       <hr>
 
       <div class="testView">
-        <h1><strong>Step 2.</strong> 그림 상담</h1>
+        <h1><strong>Step 2. 그림 상담</strong></h1>
         <div class="row">
             <div class="col-md-4">
                 <p>이미지 미리보기</p>
@@ -145,8 +198,10 @@
         </div>
       </div>
 
+      <hr>
+
       <div class="testView">
-        <h1><strong>Step 3.</strong> 인터뷰</h1>
+        <h1><strong>Step 3. 인터뷰</strong></h1>
           <div class="row">
               <div class="col-md-5">
                   <p>이미지 미리보기</p>
@@ -165,16 +220,16 @@
       <button class="btn btn-info">제출</button>
       <br>
       <br>
-
         <button class="btn btn-info" disabled>
           <span class="spinner-border spinner-border-sm"></span>
           Loading..
         </button>
 
-
   </section>
 
-   <footer class="bg-black small text-center text-white-50">
+
+<!-- Footer -->
+  <footer style="padding:4rem 0;" class="bg-black small text-center text-white-50">
       <section class="contact-section bg-black">
       <div class="container">
           <div class="social d-flex justify-content-center">
@@ -188,10 +243,11 @@
               <i class="fab fa-github"></i>
             </a>
           </div>
-          <p>Copyright &copy; Your Website 2019</p>
+          <p style="margin: 1rem 0; color: black;">Copyright &copy; Your Website 2019</p>
       </div>
       </section>
   </footer>
+
 
 <!-- Bootstrap core JavaScript -->
 {% load static %}
@@ -221,18 +277,20 @@ $().UItoTop({ easingType: 'easeOutQuart' });
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript">
-  function readURL(input) {
-      if (input.files && input.files[0]) {
+
+    function readURL(input, previewnum) {
+        previewnum = "#"+previewnum;
           var reader = new FileReader();
           reader.onload = function(e) {
-              $('#foo').attr('src', e.target.result);
+              $(previewnum).attr('src', e.target.result);
           }
           reader.readAsDataURL(input.files[0]);
-      }
-  }
+    }
 
-  $("#imgInp").change(function() {
-      readURL(this)
+  $(".custom-file-input").change(function() {
+       var previewnum = $(this).attr('previewnum');
+
+      readURL(this, previewnum)
   });
 </script>
 
