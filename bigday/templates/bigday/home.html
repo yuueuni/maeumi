@@ -1,64 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
+{% block title %}- Home{% endblock %}
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+{% block content %}
 
-  <title>Maeum</title>
-
-  <!-- Bootstrap core CSS -->
-  {% load static %}
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  {% load static %}
-  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
-
-
-
-  <!-- Custom styles for this template -->
-  {% load static %}
-  <link href="{% static 'grayscale.min.css' %}" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'style.css' %}">
-
-
-  <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-</head>
-
-<body id="page-top">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div style="font-family: 'Gaegu', cursive !important;" class="container">
-      <a style="font-size: -webkit-xxx-large;" class="navbar-brand js-scroll-trigger" href="#page-top">마음이</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="#about">마음이소개</a>
-          </li>
-          <li class="nav-item">
-            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'test' %}">그림상담 </a>
-          </li>
-          <li class="nav-item">
-            <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'report' %}">최종리포트 </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Header -->
+  <!-- main -->
   <section style="font-family: 'Gaegu', cursive !important;" class="masthead">
     <div style="display:flex; justify-content: space-around;" class="container d-flex h-100 align-items-center">
       <div style="margin: 0px !important; display:block;" class="mx-auto text-center">
@@ -96,7 +42,7 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Sign in & up Section -->
   <section style="font-family: 'Gaegu', cursive;" id="loginup" class="about-section text-center">
       <h1 style="text-align: center;">로그인 & 회원가입</h1>
     <div style="display:block;">
@@ -105,6 +51,8 @@
                 <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
                 <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
                 <div class="login-form">
+
+                     <!-- sign in
                     <div class="sign-in-htm">
                         <div class="group">
                             <label for="user" class="label">Username</label>
@@ -119,13 +67,44 @@
                             <label for="check"><span class="icon"></span> Keep me Signed in</label>
                         </div>
                         <div class="group">
-                            <input type="submit" class="button" value="Sign In">
+                            <button type="submit" class="button" data-toggle="modal" data-target="#signInModal">Sign In</button>
                         </div>
+
                         <div class="hr"></div>
                         <div class="foot-lnk">
                             <a href="#forgot">Forgot Password?</a>
                         </div>
                     </div>
+
+                    <form action="" method="post">
+                        {{form.as_p}}
+                        {% csrf_token %}
+                        <div class="sign-in-htm">
+                            <div class="group">
+                                <label for="user" class="label">Username</label>
+                                <input id="user" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Password</label>
+                                <input id="pass" type="password" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <input id="check" type="checkbox" class="check" checked>
+                                <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                            </div>
+                            <div class="group">
+                                <input class="btn btn-primary" type="submit" value="Register">
+                            </div>
+
+                            <div class="hr"></div>
+                            <div class="foot-lnk">
+                                <a href="#forgot">Forgot Password?</a>
+                            </div>
+                        </div>
+
+                    </form>-->
+
+                    <!-- sign up
                     <div class="sign-up-htm">
                         <div class="group">
                             <label for="user" class="label">Username</label>
@@ -144,66 +123,94 @@
                             <input id="pass" type="text" class="input">
                         </div>
                         <div class="group">
-                            <input type="submit" class="button" value="Sign Up">
+                            <button type="submit" class="button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
                         </div>
                         <div class="hr"></div>
                         <div class="foot-lnk">
                             <label for="tab-1">Already Member?</label>>
                         </div>
-                    </div>
+                    </div>-->
+
+                    <form action="" method="post">
+                        {{form.as_p}}
+                        {% csrf_token %}
+                        <div class="sign-up-htm">
+                            <div class="group">
+                                <label for="username" class="label">Username</label>
+                                <input id="username" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="first_name" class="label">Username</label>
+                                <input id="first_name" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="last_name" class="label">Username</label>
+                                <input id="last_name" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="email" class="label">Email Address</label>
+                                <input id="email" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="password" class="label">Password</label>
+                                <input id="password" type="password" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <label for="password2" class="label">Repeat Password</label>
+                                <input id="password2" type="password" class="input" data-type="password">
+                            </div>
+                            <div class="group">
+                                <input class="btn btn-primary" type="submit" value="Register">
+                            </div>
+                            <div class="hr"></div>
+                            <div class="foot-lnk">
+                                <label for="tab-1">Already Member?</label>>
+                            </div>
+                        </div>
+
+                    </form>
+
+
                 </div>
             </div>
         </div>
       </div>
+
+      <!-- sign in modal -->
+      <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Sign In</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+               Successfully Sign in !
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- sign up modal -->
+      <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Sign Up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+               Successfully Sign up !
+              </div>
+            </div>
+          </div>
+      </div>
+
+
   </section>
 
-  <!-- Footer -->
-  <footer style="padding:4rem 0;" class="bg-black small text-center text-white-50">
-      <section class="contact-section bg-black">
-      <div class="container">
-          <div class="social d-flex justify-content-center">
-            <a href="#" class="mx-2">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="mx-2">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="mx-2">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-          <p style="margin: 1rem 0; color: black;">Copyright &copy; Your Website 2019</p>
-      </div>
-      </section>
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-{% load static %}
-<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-
-<!-- Plugin JavaScript -->
-<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
-
-<!-- Custom scripts for this template -->
-<script src="{% static 'js/grayscale.min.js' %}"></script>
-
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-          /*
-          var defaults = {
-          containerID: 'toTop', // fading element id
-          containerHoverID: 'toTopHover', // fading element hover id
-          scrollSpeed: 1200,
-          easingType: 'linear'
-          };
-          */
-    $().UItoTop({ easingType: 'easeOutQuart' });
-    });
-  </script>
-
-
-</body>
-
-</html>
+  {% endblock %}
