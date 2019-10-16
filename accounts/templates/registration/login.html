@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}- Login{% endblock %}
+
+{% block content %}
+<section style="font-family: 'Gaegu', cursive;" class="about-section text-center">
+      <h1 style="text-align: center;">로그인</h1>
+    <div style="display:block;">
+        <div class="login-wrap">
+            <div class="login-html">
+                <div class="login-form">
+                    <div class="alert alert-info">Please enter your login informations.</div>
+                    <form action="" method="post">
+                        {{form.as_p}}
+                        {% csrf_token %}
+                        <input class="btn btn-primary" type="submit" class="button" value="Login">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
