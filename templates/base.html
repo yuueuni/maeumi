@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Maeum {% block title %}{% endblock %}</title>
+
+  <!-- Bootstrap core CSS -->
+  {% load static %}
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  {% load static %}
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+
+
+
+  <!-- Custom styles for this template -->
+  {% load static %}
+  <link href="{% static 'grayscale.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <haeder>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div style="font-family: 'Gaegu', cursive !important;" class="container">
+          <a style="font-size: -webkit-xxx-large;" class="navbar-brand js-scroll-trigger" href="{% url 'home' %}#page-top">마음이</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                <a style="font-size: large; color:black;">{{user.get_username}}님 반갑습니다.</a>
+              </li>
+                {% else %}
+                {% endif %}
+              <li class="nav-item">
+                <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'home' %}#about">마음이소개</a>
+              </li>
+              <li class="nav-item">
+                <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'test' %}">그림상담 </a>
+              </li>
+              <li class="nav-item">
+                <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'report' %}">최종리포트 </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </haeder>
+  {% block content %}
+  {% endblock %}
+
+  <!-- Footer -->
+  <footer style="padding:4rem 0;" class="bg-black small text-center text-white-50">
+      <section class="contact-section bg-black">
+      <div class="container">
+          <div class="social d-flex justify-content-center">
+            <a href="#" class="mx-2">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="mx-2">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="mx-2">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <p style="margin: 1rem 0; color: black;">Copyright &copy; Your Website 2019</p>
+      </div>
+      </section>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+{% load static %}
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Plugin JavaScript -->
+<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Custom scripts for this template -->
+<script src="{% static 'js/grayscale.min.js' %}"></script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+          /*
+          var defaults = {
+          containerID: 'toTop', // fading element id
+          containerHoverID: 'toTopHover', // fading element hover id
+          scrollSpeed: 1200,
+          easingType: 'linear'
+          };
+          */
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+  </script>
+
+
+</body>
+
+</html>
