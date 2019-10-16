@@ -45,11 +45,23 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
+
                 {% if user.is_authenticated %}
                 <li class="nav-item">
                 <a style="font-size: large; color:black;">{{user.get_username}}님 반갑습니다.</a>
               </li>
+                <li class="nav-item">
+                  <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'logout' %}">logout</a>
+                </li>
+
                 {% else %}
+                <li class="nav-item">
+                  <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'login' %}">login</a>
+                </li>
+                <li class="nav-item">
+                  <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'register' %}">signup</a>
+                </li>
+
                 {% endif %}
               <li class="nav-item">
                 <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'home' %}#about">마음이소개</a>
