@@ -1,2 +1,2 @@
 [IITP] Team Project Ⅲ
-BIG-DAY / Maeum-i Project
+(BIG-DAY) Maeum-i
