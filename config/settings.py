@@ -19,6 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# with open('C:\\Users\\user\\Desktop\\secret_key.txt') as f:
 with open('C:\\Users\\acorn\\Desktop\\secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
@@ -76,6 +77,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'maeumi_db',
         'NAME': 'maeum_db',
         'USER':'root',
         'PASSWORD':'54321',
