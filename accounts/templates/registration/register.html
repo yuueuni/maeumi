@@ -9,11 +9,13 @@
             <div class="login-html">
                 <div class="login-form">
                     <div class="alert alert-info">Please enter your accounts informations.</div>
-                    <form action="" method="post">
-                        {{form.as_p}}
-                        {% csrf_token %}
-                        <input class="btn btn-primary" type="submit" class="button" value="Register">
-                    </form>
+                    <div class="register">
+                        <form action="" method="post">
+                            {{form.as_p}}
+                            {% csrf_token %}
+                            <input class="btn btn-primary" type="submit" class="button" value="Register">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

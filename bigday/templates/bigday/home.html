@@ -22,8 +22,6 @@
   <section style="font-family: 'Gaegu', cursive;" id="about" class="projects-section bg-light">
     <div class="container">
         <p style="text-align: center; font-size: -webkit-xxx-large;">마음이 소개</p>
-
-        <p style="text-align: center; font-size: xx-large;">마음이?</p>
         <ul>
             <li>한국 아동의 심리적 스트레스 증가. 위험성 이슈화</li>
             <li>OECT 국가 중 '학업 스트레스' 가장 많이 받음</li>
@@ -31,199 +29,20 @@
             <li>아동 심리 상담센터 찾는 부모 증가</li>
             <li>아동 특화 온라인 검사 서비스 제공</li>
         </ul>
-        <p style="text-align: center; font-size: xx-large;">HTP 검사?</p>
+    </div>
+  </section>
+
+<!-- 개발자들 -->
+  <section style="font-family: 'Gaegu', cursive;" class="about-section text-center">
+    <div class="container">
+        <p style="text-align: center; font-size: -webkit-xxx-large;">HTP 검사</p>
         <ul>
             <li>H : House (집)</li>
             <li>T : Tree (나무)</li>
             <li>P : Person (사람)</li>
             <li>아동에게 친숙한 집, 나무, 사람을 그리게 한 뒤, 투사된 인격의 양상을 검사하는 방법</li>
         </ul>
-
     </div>
-  </section>
-
-  <!-- Sign in & up Section
-  <section style="font-family: 'Gaegu', cursive;" id="loginup" class="about-section text-center">
-      <h1 style="text-align: center;">로그인 & 회원가입</h1>
-    <div style="display:block;">
-        <div class="login-wrap">
-            <div class="login-html">
-                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-                <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-                <div class="login-form">
-
-
-                    <div class="sign-in-htm">
-                        <div class="group">
-                            <label for="user" class="label">Username</label>
-                            <input id="user" type="text" class="input">
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">Password</label>
-                            <input id="pass" type="password" class="input" data-type="password">
-                        </div>
-                        <div class="group">
-                            <input id="check" type="checkbox" class="check" checked>
-                            <label for="check"><span class="icon"></span> Keep me Signed in</label>
-                        </div>
-                        <div class="group">
-                            <button type="submit" class="button" data-toggle="modal" data-target="#signInModal">Sign In</button>
-                        </div>
-
-                        <div class="hr"></div>
-                        <div class="foot-lnk">
-                            <a href="#forgot">Forgot Password?</a>
-                        </div>
-                    </div>
-
-                    <form action="" method="post">
-                        {{form.as_p}}
-                        {% csrf_token %}
-                        <div class="sign-in-htm">
-                            <div class="group">
-                                <label for="user" class="label">Username</label>
-                                <input id="user" type="text" class="input">
-                            </div>
-                            <div class="group">
-                                <label for="pass" class="label">Password</label>
-                                <input id="pass" type="password" class="input" data-type="password">
-                            </div>
-                            <div class="group">
-                                <input id="check" type="checkbox" class="check" checked>
-                                <label for="check"><span class="icon"></span> Keep me Signed in</label>
-                            </div>
-                            <div class="group">
-                                <input class="btn btn-primary" type="submit" value="Register">
-                            </div>
-
-                            <div class="hr"></div>
-                            <div class="foot-lnk">
-                                <a href="#forgot">Forgot Password?</a>
-                            </div>
-                        </div>
-
-                    </form>-->
-
-                    <!-- sign up
-                    <div class="sign-up-htm">
-                        <div class="group">
-                            <label for="user" class="label">Username</label>
-                            <input id="user" type="text" class="input">
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">Password</label>
-                            <input id="pass" type="password" class="input" data-type="password">
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">Repeat Password</label>
-                            <input id="pass" type="password" class="input" data-type="password">
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">Email Address</label>
-                            <input id="pass" type="text" class="input">
-                        </div>
-                        <div class="group">
-                            <button type="submit" class="button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
-                        </div>
-                        <div class="hr"></div>
-                        <div class="foot-lnk">
-                            <label for="tab-1">Already Member?</label>>
-                        </div>
-                    </div>
-
-                    <form action="" method="post">
-                        {{form.as_p}}
-                        {% csrf_token %}
-                        <div class="sign-up-htm">
-                            <div class="group">
-                                <label for="username" class="label">Username</label>
-                                <input id="username" type="text" class="input">
-                            </div>
-                            <div class="group">
-                                <label for="first_name" class="label">Username</label>
-                                <input id="first_name" type="text" class="input">
-                            </div>
-                            <div class="group">
-                                <label for="last_name" class="label">Username</label>
-                                <input id="last_name" type="text" class="input">
-                            </div>
-                            <div class="group">
-                                <label for="email" class="label">Email Address</label>
-                                <input id="email" type="text" class="input">
-                            </div>
-                            <div class="group">
-                                <label for="password" class="label">Password</label>
-                                <input id="password" type="password" class="input" data-type="password">
-                            </div>
-                            <div class="group">
-                                <label for="password2" class="label">Repeat Password</label>
-                                <input id="password2" type="password" class="input" data-type="password">
-                            </div>
-                            <div class="group">
-                                <input class="btn btn-primary" type="submit" value="Register">
-                            </div>
-                            <div class="hr"></div>
-                            <div class="foot-lnk">
-                                <label for="tab-1">Already Member?</label>>
-                            </div>
-                        </div>
-
-                    </form>
-
-
-                </div>
-            </div>
-        </div>
-      </div>
-
-
-      <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Sign In</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-               Successfully Sign in !
-              </div>
-            </div>
-          </div>
-      </div>
-
-
-      <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Sign Up</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-               Successfully Sign up !
-              </div>
-            </div>
-          </div>
-      </div>
-
-
-  </section>-->
-
-<!-- 개발자들 -->
-  <section style="font-family: 'Gaegu', cursive;" id="loginup" class="about-section text-center">
-
-      <h1 style="text-align: center;">Developers</h1>
-      <div class="container">
-          <div style="display: flex; justify-content: space-evenly">
-              <div style="display: block">1</div>
-              <div style="display: block">1</div>
-              <div style="display: block">1</div>
-              <div style="display: block">1</div>
-      </div>
   </section>
 
   {% endblock %}
