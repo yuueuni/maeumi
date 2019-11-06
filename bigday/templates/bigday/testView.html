@@ -4,200 +4,42 @@
 
 {% block content %}
 
-<!-- Projects Section -->
-  <section style="font-family: 'Gaegu', cursive;" id="projects" class="about-section text-center">
-      <div style="margin-top: 2rem;" class="testView">
-        <h1><strong>Step 1. 기본정보</strong></h1>
-        <div class="addInfo">
-            <h3>Q1. 그림을 그린 아이의 <strong><font color="#ff008d">이름(닉네임)</font></strong>을 적어주세요.</h3>
-            <input type="text" placeholder="이름">
-
-            <h3>Q2. 아이의 <strong><font color="#ff008d">성별</font></strong>을 선택해주세요.</h3>
-            <div>
-                <input type="checkbox" class="form-check-input" value="">
-                <label>남아</label>
-            </div>
-            <div>
-                <input type="checkbox" class="form-check-input" value="">
-                <label>여아</label>
-            </div>
-
-
-            <h3>Q3. 아이의 <strong><font color="#ff008d">나이대</font></strong>를 선택해주세요.</h3>
-            <div>
-                <input type="checkbox" class="form-check-input" value="">
-                <label>5 - 7세</label>
-            </div>
-            <div>
-                <input type="checkbox" class="form-check-input" value="">
-                <label>8 - 10세</label>
-            </div>
-            <div>
-                <input type="checkbox" class="form-check-input" value="">
-                <label>11 - 13세</label>
-            </div>
-
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="testView">
-        <h1><strong>Step 2. 그림 상담</strong></h1>
-          <div>
-            <h4>그림 그리는 방법</h4>
-            <div style="display: block; border: 1px solid gray;">
-              <p> 그림 그리는 설명 ~~~~ </p>
-            </div>
-              <br>
-              <h4>파일 업로드</h4>
-              <br>
-            <div style="display: flex; justify-content: space-evenly;">
-                <div style="display: block; width: 400px;">
-                    <div class="uploadPhoto">
-                        <div style="margin: 0 !important;">
-                            <form action="" method="">
-                                <h4>나무</h4>
-                                <div style="margin-bottom: 10px;" class="custom-file">
-                                    <input  previewnum="foo1" type="file" class="custom-file-input" id="imgInp1">
-                                    <label class="custom-file-label" for="imgInp1">Choose file</label>
-                                </div>
-                                <img style="width: 350px; height: 350px;" id="foo1"src="#" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="display: block; width: 400px;">
-                    <div class="uploadPhoto">
-                        <div style="margin: 0 !important;">
-                            <form action="" method="">
-                                <h4>사람</h4>
-                                <div style="margin-bottom: 10px;" class="custom-file">
-                                    <input previewnum="foo2" type="file" class="custom-file-input" id="imgInp2">
-                                    <label class="custom-file-label" for="imgInp2">Choose file</label>
-                                </div>
-                                <img style="width: 350px; height: 350px;" id="foo2"src="#" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="display: block; width: 400px;">
-                    <div class="uploadPhoto">
-                        <div style="margin: 0 !important;">
-                            <form action="" method="">
-                                <h4>집</h4>
-                                <div style="margin-bottom: 10px;" class="custom-file">
-                                    <input previewnum="foo3" type="file" class="custom-file-input" id="imgInp3">
-                                    <label class="custom-file-label" for="imgInp3">Choose file</label>
-                                </div>
-                                <img style="width: 350px; height: 350px;" id="foo3"src="#" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-          <nav style="text-align: center; margin-top: 5px;">
-              <input class="btn btn-info" style="background-color:#494d4e; border-color:#494d4e;" type="submit" value="등록" >
-          </nav>
-      </div>
-
-      <hr>
-
-      <div class="testView">
-        <h1><strong>Step 2. 그림 상담</strong></h1>
-        <div class="row">
-            <div class="col-md-4">
-                <p>이미지 미리보기</p>
-                <form>
-                  <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="switch1">
-                    <label class="custom-control-label" for="switch1">해당 그림이 나무가 맞나요?</label>
-                  </div>
-                </form>
-                  <input type="radio" class="form-check-input" name="optradio">
-            </div>
-
-            <div class="col-md-4">
-                <p>이미지 미리보기</p>
-                <form>
-                  <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="switch2">
-                    <label class="custom-control-label" for="switch2">해당 그림이 집이 맞나요?</label>
-                  </div>
-                </form>
-
-                <input type="checkbox" class="form-check-input" value="">
-            </div>
-
-            <div class="col-md-4">
-                <p>이미지 미리보기</p>
-                <form>
-                  <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="switch3">
-                    <label class="custom-control-label" for="switch3">해당 그림이 사람이 맞나요?</label>
-                  </div>
-                </form>
-            </div>
-
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="testView">
-        <h1><strong>Step 3. 인터뷰</strong></h1>
-          <div class="row">
-              <div class="col-md-5">
-                  <p>이미지 미리보기</p>
-              </div>
-              <div style="text-align: left;" class="col-md-7">
-                  <h3>Q1. 이 집은 누구의 집인가요?</h3>
-                  <input type="text" style="margin: 0 0 2rem 1.5rem; padding-left: .5rem; width:50%;">
-                  <h3>Q2. 나중에 이 나무는 어떻게 될까요?</h3>
-                  <input type="text" style="margin: 0 0 2rem 1.5rem; padding-left: .5rem; width:50%;">
-                  <h3>Q3. 지금 이 사람의 기분은 어떤가요?</h3>
-                  <input type="text" style="margin: 0 0 2rem 1.5rem; padding-left: .5rem; width:50%;">
-              </div>
+  <section style="font-family: 'JejuMyeongjo' !important;" id="projects" class="about-section text-center">
+      <div style="margin-top: 0;" class="testView">
+          <br>
+          <p style="font-size: xx-large;"><strong>그림 그리는 방법</strong></p>
+          <br>
+          <div style="display: inline-block;">
+              <ol style="text-align: justify; line-height: 250%;">
+                  <li>먼저 A4 용지 한 장과 연필, 지우개를 아이 앞에 놓아 주세요.</li>
+                  <li>첫 번째 용지에는 집을 그릴 수 있도록 지도해주세요.</li>
+                  <li>집을 그린 후에 추가로 더 그려 넣고 싶은 것이 있다면 그릴 수 있도록 안내해주세요.</li>
+                  <li>다 그린 아이들을 위해 새로운 용지를 준비해주세요.</li>
+                  <li>두 번째 용지에는 나무를 그릴 수 있도록 지도해주세요.</li>
+                  <li>나무를 그린 후에 추가로 그려 넣고 싶은 것이 있으면 그릴 수 있도록 안내해주세요.</li>
+                  <li>다 그린 아이들을 위해 새로운 용지를 준비해주세요.</li>
+                  <li>이번에는 용지를 세로로 놔주세요.</li>
+                  <li>용지에 사람을 그리는데 막대 사람을 그리지 마시고, 잘 그려야 하지는 않지만 최대한 정성껏 그릴 수 있도록 아이들을 지도해주세요.</li>
+                  <li>다 그린 경우, 그림을 스캔한 후에 집, 사람, 나무를 순서대로 업로드해주세요.</li>
+              </ol>
+          <br>
+          <br>
           </div>
       </div>
-
-      <button class="btn btn-info">제출</button>
+      <div style="display: block; text-align: center;">
+          <div style="display: inline-block;">
+              <p style="font-size: xx-large;"><strong>유의사항</strong></p>
+              <br>
+                  <ul style="text-align: justify; line-height: 250%;">
+                      <li>검사 결과는 검사 당시의 주변 상황에 따라 민감하게 달라질 수 있으므로 주변을 정리한 후에 진행해주세요.</li>
+                      <li>책상 정리를 해 주시고 검사 중 불필요한 행동이나 잡담을 삼가도록 안내 부탁 드립니다.</li>
+                      <li>솔직하고 성실하게 실시 할 수 있도록 지도해주세요.</li>
+                  </ul>
+          </div>
+      </div>
       <br>
       <br>
-        <button class="btn btn-info" disabled>
-          <span class="spinner-border spinner-border-sm"></span>
-          Loading..
-        </button>
-
+      <a style="font-family: 'JejuMyeongjo';" class="btn btn-primary" href="{% url 'analysis:inputImage' %}">그림 등록하기</a>
   </section>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript">
-
-    function readURL(input, previewnum) {
-        previewnum = "#"+previewnum;
-          var reader = new FileReader();
-          reader.onload = function(e) {
-              $(previewnum).attr('src', e.target.result);
-          }
-          reader.readAsDataURL(input.files[0]);
-    }
-
-  $(".custom-file-input").change(function() {
-       var previewnum = $(this).attr('previewnum');
-
-      readURL(this, previewnum)
-  });
-</script>
-
-<script>
-$(".custom-file-input").on("change", function() {
-  var fileName = $(this).val().split("\\").pop();
-  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-});
-</script>
-  {% endblock %}
+{% endblock %}
