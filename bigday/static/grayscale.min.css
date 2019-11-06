@@ -42,7 +42,7 @@
 		padding-top: 0;
 		padding-bottom: 0;
 		border-bottom: none;
-		background-color: transparent;
+		background-color: #cbecff;
 		transition: background-color .3s ease-in-out
 	}
 	#mainNav .navbar-brand {

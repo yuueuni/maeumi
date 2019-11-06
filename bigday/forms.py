@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django import forms
+from .models import *
 
 
 class RegisterForm(forms.ModelForm):
@@ -15,3 +16,4 @@ class RegisterForm(forms.ModelForm):
         if cd['password'] != cd['password2']:
             raise forms.ValidationError('Passwords not matched!')
         return cd['password2']
+
