@@ -19,14 +19,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# with open('C:\\Users\\user\\Desktop\\secret_key.txt') as f:
 with open('C:\\Users\\acorn\\Desktop\\secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','192.168.0.198','127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '192.168.0.198', '127.0.0.1']
 
 # Application definition
 
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'analysis',
 ]
 
 MIDDLEWARE = [
@@ -77,12 +77,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'maeumi_db',
-        'NAME': 'maeum_db',
-        'USER':'root',
-        'PASSWORD':'54321',
-        'HOST':'localhost',
-        'PORT':'3306'
+        'NAME': 'maeumi_db',
+        'USER': 'root',
+        'PASSWORD': '54321',
+        'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
 
@@ -124,3 +123,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 LOGIN_REDIRECT_URL = '/'
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

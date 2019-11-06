@@ -25,10 +25,43 @@
   <link href="{% static 'grayscale.min.css' %}" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'style.css' %}">
 
-
   <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    @font-face {
+        font-family: 'JejuMyeongjo';
+        font-style: normal;
+        font-weight: 400;
+        src: url(//fonts.gstatic.com/ea/jejumyeongjo/v3/JejuMyeongjo-Regular.eot);
+        src: url(//fonts.gstatic.com/ea/jejumyeongjo/v3/JejuMyeongjo-Regular.eot?#iefix) format('embedded-opentype'),
+             url(//fonts.gstatic.com/ea/jejumyeongjo/v3/JejuMyeongjo-Regular.woff2) format('woff2'),
+             url(//fonts.gstatic.com/ea/jejumyeongjo/v3/JejuMyeongjo-Regular.woff) format('woff'),
+             url(//fonts.gstatic.com/ea/jejumyeongjo/v3/JejuMyeongjo-Regular.ttf) format('truetype');
+      }
+
+    @font-face {
+        font-family: 'SeoulHangangM';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulHangangM.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Chosunilbo_myungjo';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'TDTDTadakTadak';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/TDTDTadakTadak.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+  </style>
 
 </head>
 
@@ -38,7 +71,7 @@
   <haeder>
       <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div style="font-family: 'Gaegu', cursive !important;" class="container">
-          <a style="font-size: -webkit-xxx-large;" class="navbar-brand js-scroll-trigger" href="{% url 'home' %}#page-top">마음이</a>
+          <a style="font-size: -webkit-xxx-large;" class="navbar-brand js-scroll-trigger" href="{% url 'bigday:home' %}#page-top">마음이</a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
@@ -64,13 +97,13 @@
 
                 {% endif %}
               <li class="nav-item">
-                <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'home' %}#about">마음이소개</a>
+                <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'bigday:home' %}#about">마음이소개</a>
               </li>
               <li class="nav-item">
-                <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'test' %}">그림상담 </a>
+                <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'bigday:home' %}#htpTest">HTP 검사 </a>
               </li>
               <li class="nav-item">
-                <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'report' %}">최종리포트 </a>
+                <a style="font-size: x-large; padding: 0 1.5rem;" class="nav-link js-scroll-trigger" href="{% url 'bigday:testView' %}">그림상담 </a>
               </li>
             </ul>
           </div>

@@ -2,7 +2,7 @@
 {% block title %}- Registration{% endblock %}
 
 {% block content %}
-<section style="font-family: 'Gaegu', cursive;" class="about-section text-center">
+<section style="font-family: 'Gaegu', cursive; padding-top: 6rem;" class="about-section text-center">
       <h1 style="text-align: center;">회원가입</h1>
     <div style="display:block;">
         <div class="login-wrap">
@@ -10,7 +10,7 @@
                 <div class="login-form">
                     <div class="alert alert-info">Please enter your accounts informations.</div>
                     <div class="register">
-                        <form action="" method="post">
+                        <form style="font-family: 'TDTDTadakTadak' !important;" method="post">
                             {{form.as_p}}
                             {% csrf_token %}
                             <input class="btn btn-primary" type="submit" class="button" value="Register">
@@ -21,5 +21,18 @@
         </div>
     </div>
 </section>
+
+<style>
+    form span {
+        display: block;
+        text-align: center !important;
+        padding-left: 2rem;
+        font-size: small;
+    }
+    form p {
+        text-align: right;
+        margin-right: 4.5rem;
+    }
+</style>
 
 {% endblock %}

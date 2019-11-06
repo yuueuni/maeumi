@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% block title %}- start Test{% endblock %}
+
+{% block content %}
+  <section style="font-family: 'Gaegu', cursive;" id="projects" class="about-section text-center">
+      <div style="margin-top: 0;" class="testView">
+        <h1><strong>그림 업로드</strong></h1>
+          <div>
+              <div style="display: block;">
+                <div class="uploadPhoto">
+                    <div style="margin: 0 !important;">
+                        <form name="inputImg" method="POST">
+                            <div style="display: flex;" class="container">
+                                <div style="display: block;" class="col-md-4">
+                                    <h3><strong>집</strong></h3>
+                                    <div style="margin-bottom: 1rem;" class="custom-file">
+                                        <input previewnum="foo1" type="file" class="custom-file-input" id="imgInp1" name="imgInp1">
+                                        <label class="custom-file-label" for="imgInp1">Choose file</label>
+                                    </div>
+                                    <img style="width: 20rem; height: 20rem;" id="foo1"/>
+                                </div>
+
+                                <div style="display: block;" class="col-md-4">
+                                    <h3><strong>나무</strong></h3>
+                                    <div style="margin-bottom: 1rem;" class="custom-file">
+                                        <input previewnum="foo2" type="file" class="custom-file-input" id="imgInp2" name="imgInp2">
+                                        <label class="custom-file-label" for="imgInp2">Choose file</label>
+                                    </div>
+                                    <img style="width: 20rem; height: 20rem;" id="foo2"/>
+                                </div>
+
+                                <div style="display: block;" class="col-md-4">
+                                    <h3><strong>사람</strong></h3>
+                                    <div style="margin-bottom: 1rem;" class="custom-file">
+                                        <input previewnum="foo3" type="file" class="custom-file-input" id="imgInp3" name="imgInp3">
+                                        <label class="custom-file-label" for="imgInp3">Choose file</label>
+                                    </div>
+                                    <img style="width: 20rem; height: 20rem;" id="foo3"/>
+                                </div>
+                            </div>
+                            <br>
+                            {% csrf_token %}
+                            <input class="btn btn-info" style="background-color:#494d4e; border-color:#494d4e;" id="picSend" type="submit" value="등록">
+                            <div id="resultView">
+                                <h3 id="resultTxt"></h3>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div style="display: none; font-family: 'Gaegu', cursive;" id="username">
+          <h1><strong>{{user.get_username}}</strong>님의 분석 결과입니다.</h1>
+          <br>
+      </div>
+      <div style="display: none; font-family: 'Gaegu', cursive;" id="resultImg" class="container">
+          <br>
+          <div style="display: flex; justify-content: center; padding: 3rem; background: #dc354514;" id="resultImg1"></div>
+          <br>
+          <br>
+          <br>
+          <div style="display: flex; justify-content: center; padding: 3rem; background: #dc354514;" id="resultImg2"></div>
+          <br>
+          <br>
+          <br>
+          <div style="display: flex; justify-content: center; padding: 3rem; background: #dc354514;" id="resultImg3"></div>
+      </div>
+
+  </section>
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+     // using jQuery
+      function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie != '') {
+          var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+      function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+      }
+      $(document).ready(function() {
+        var csrftoken = getCookie('csrftoken');
+        $.ajaxSetup({
+          beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+              xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+          }
+        });
+      });
+</script>
+<script type="text/javascript">
+    function readURL(input, previewnum) {
+        previewnum = "#"+previewnum;
+          var reader = new FileReader();
+          reader.onload = function(e) {
+              $(previewnum).attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+    }
+
+  $(".custom-file-input").change(function() {
+       var previewnum = $(this).attr('previewnum');
+      readURL(this, previewnum)
+  });
+</script>
+{% load static %}
+<script type="text/javascript" src="{% static 'js/jquery.ajax-cross-origin.min.js' %}"></script>
+<script>
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+<script>
+$('#picSend').on("click",function() {
+    imgForm = document.inputImg;
+    if (imgForm.imgInp1.value==""||imgForm.imgInp2.value==""||imgForm.imgInp3.value==""){
+        alert("사진을 모두 입력해주세요.");
+        return imgForm.imgInp1.focus();
+        /*swal({
+            title: "사진을 모두 입력해주세요",
+            icon: "warning",
+          }).then(result => {
+              continue;
+        })*/
+    }
+
+    var formData = new FormData();
+    formData.append("house", $("#imgInp1")[0].files[0]);
+    formData.append("tree", $("#imgInp2")[0].files[0]);
+    formData.append("person", $("#imgInp3")[0].files[0]);
+        $.ajax({
+            crossOrigin : true,
+            url: '/analysis/getPic/',
+            type: 'POST',
+            dataType:'json',
+            processData: false,
+            contentType: false,
+            data : formData,
+            success: function (result) {
+                document.getElementById("resultImg").style.display="block";
+                document.getElementById("username").style.display="block";
+                $("#resultTxt").remove();
+                $("#resultImg1").append(result['imgHouse']);
+                $("#resultImg2").append(result['imgTree']);
+                $("#resultImg3").append(result['imgPerson']);
+            }
+        });
+        $("#picSend").remove();
+        $("#resultTxt").append("데이터 분석중입니다...");
+})
+</script>
+{% endblock %}
+

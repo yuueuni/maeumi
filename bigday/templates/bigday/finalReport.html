@@ -5,19 +5,38 @@
 {% block content %}
 
   <section style="font-family: 'Gaegu', cursive;" class="signup-section">
-      <div style="margin-top: 2rem;" class="testView">
+      <div style="margin: 2rem 5rem;" class="testView">
           <h1 style="text-align: center;"><strong>마음이</strong>님의 그림검사 최종 결과입니다.</h1>
 
           <br>
 
           <div class="row">
               <div style="text-align: center;" class="col-md-4">
-                  <p>이미지 미리보기</p>
-              </div>
-              <div style="text-align: left;" class="col-md-8">
-                  <h3><strong>나무</strong> 그림은 ...</h3>
-                  <h3><strong>집</strong> 그림은 ...</h3>
-                  <h3><strong>사람</strong> 그림은 ...</h3>
+                  <div style="display: flex;">
+                      <div style="display: block;">
+                          {% load static %}
+                          <img style="width: 250px; height: 250px;" src="{% static 'labelImage/houselabel1.jpg' %}" />
+                      </div>
+
+                      <div style="display: block;">
+                          <h3><strong>나무</strong> 그림은 ...</h3>
+                      </div>
+                  </div>
+
+                  <br>
+
+                  <div style="display: block;">
+                      {% load static %}
+                      <img style="width: 250px; height: 250px;" src="{% static 'labelImage/treelabel1.jpg' %}" />
+                  </div>
+
+                  <br>
+
+                  <div style="display: block;">
+                      {% load static %}
+                      <img style="width: 250px; height: 250px;" src="{% static 'labelImage/personlabel1.jpg' %}" />
+                  </div>
+
               </div>
           </div>
 

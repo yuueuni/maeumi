@@ -9,6 +9,13 @@ a{color:inherit;text-decoration:none}
 	padding: 2rem;
 }
 
+@font-face {
+	font-family: 'TDTDTadakTadak';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/TDTDTadakTadak.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .testView h1{
 	margin-bottom: 2rem;
 }

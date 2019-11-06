@@ -1,9 +1,9 @@
 from django.urls import path
 from bigday import views
 
+app_name = 'bigday'
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('test/', views.test, name='test'),
-    path('report/', views.report, name='report'),
+    path('testView/', views.testView, name='testView'),
 ]
