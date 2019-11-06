@@ -12,36 +12,49 @@
         {% load static %}
         <img style="display: block; width: 300px; height: 300px; margin: 50px;" src="{% static 'image/crayons.png' %}">
         <h2 style="text-align: center; margin: 20px 0px !important; color: black !important; font-size: xx-large;" class="text-white-50 mx-auto mt-2 mb-5">아이들의 마음에, <strong>다다르다</strong>.</h2>
-        <a style="margin-top: 20px;" href="#loginup" class="btn btn-primary js-scroll-trigger">Get Started</a>
+        <a style="margin-top: 20px;" href="{% url 'bigday:testView' %}" class="btn btn-primary js-scroll-trigger">Get Started</a>
       </div>
 
     </div>
   </section>
 
   <!-- About Section -->
-  <section style="font-family: 'Gaegu', cursive;" id="about" class="projects-section bg-light">
+  <section style="font-family: 'JejuMyeongjo' !important;" id="about" class="projects-section bg-light">
     <div class="container">
-        <p style="text-align: center; font-size: -webkit-xxx-large;">마음이 소개</p>
-        <ul>
-            <li>한국 아동의 심리적 스트레스 증가. 위험성 이슈화</li>
-            <li>OECT 국가 중 '학업 스트레스' 가장 많이 받음</li>
-            <li>아이들의 스트레스 관리는 부모의 관심 필요</li>
-            <li>아동 심리 상담센터 찾는 부모 증가</li>
-            <li>아동 특화 온라인 검사 서비스 제공</li>
-        </ul>
+        <p style="text-align: center; font-size: -webkit-xxx-large;">인사말</p>
+        <br>
+        <p style="text-align: justify; font-size: larger; margin: 0 3rem; line-height: 200%;">
+            안녕하세요,<br>
+            아동그림을 바탕으로 심리 상담 서비스를 제공하고 있는 <strong>마음이</strong> 입니다.<br>
+            마음이는 한국 아동의 심리적 스트레스가 지속해서 증가하고 있을 뿐만 아니라, OECD 국가 중 학업 스트레스가 가장 높다는 것을 확인할 수 있었습니다.<br>
+            이에 많은 아이들이 스트레스 관리가 필요로 하며, 부모의 관심과 보호가 필요한 상태임을 파악할 수 있었습니다. 해당 자료를 근거로 아동에 특화된 온라인 검사 서비스를 제공하여 이미지 인식 기반 검사 서비스를 무료로 제공 중에 있습니다.<br>
+            어린이들의 그림은 어린이 자신만의 마음 세계를 때 묻지 않은 감정의 상태와 순수하고 솔직하게 표현해 내는 그림으로 주관의 세계를 형상화하는 것이라고 볼 수 있습니다. 이에 그림을 그리고자 하는 욕구와 창조하고자 하는 욕구가 어린이들에게 나타나는 바, 이런 욕구의 하나로 표출되는 것이 그림을 그리고자 하는 욕구입니다. 이를 활용해 마음속에 내재된 욕구나 갈등을 해소시켜 주고 정서적으로 안정을 줄 수 있는 서비스를 지속해서 제공해나가겠습니다.<br>
+            감사합니다.<br>
+        </p>
+        <p style="text-align: end; font-size: larger; margin: 0 3rem;">
+            <strong>마음이 드림</strong>.
+        </p>
     </div>
   </section>
 
-<!-- 개발자들 -->
-  <section style="font-family: 'Gaegu', cursive;" class="about-section text-center">
+  <section style="font-family: 'JejuMyeongjo' !important;" id="htpTest" class="about-section text-center">
     <div class="container">
         <p style="text-align: center; font-size: -webkit-xxx-large;">HTP 검사</p>
-        <ul>
-            <li>H : House (집)</li>
-            <li>T : Tree (나무)</li>
-            <li>P : Person (사람)</li>
-            <li>아동에게 친숙한 집, 나무, 사람을 그리게 한 뒤, 투사된 인격의 양상을 검사하는 방법</li>
-        </ul>
+        <p style="text-align: justify; font-size: initial; margin: 0 3rem; line-height: 200%;">
+            HTP그림검사는 집, 나무, 사람을 그리게 하여 심리상태를 직관적으로 파악할 수 있는 검사입니다.<br>
+            <strong>첫번째</strong>, 연령이 낮은 아동들에게도 익숙하며
+            <strong>둘째</strong>, 비교적 모든 연령층의 피검자의 호의적으로 받아들인다고 생각할 수 있으며,
+            <strong>셋째</strong> 솔직하고 자유로운 언어적 표현을 이끌어낼 수 있는 요소들이라고 생각해서입니다.<br>
+            이에 각 그림들이 투사하는 요인은 아래와 같습니다.</p>
+        <br>
+      <ul style="text-align: justify; font-size: larger; margin: 0 3rem; line-height: 200%;">
+          <li><strong>H (House - 집 그림)</strong><br>
+              성장해온 가정상황, 가정생활, 가족관계, 감정, 이상적인 미래의 가정에 대한 소망, 심리적 적응, 현실과의 접근, 외부세계와의 접촉 가능성을 볼 수 있습니다.</li>
+          <li><strong>T(Tree - 나무 그림)</strong><br>
+              자기상, 현재 자신의 마음상태를 무의식적으로 느끼고 있는 상태를 반영하며 가지고 있는 에너지, 성장기에 겪은 정서적 충격의 정도, 정신적인 성숙정도를 볼 수 있습니다.</li>
+          <li><strong>P(Person - 사람 그림)</strong><br>
+              사람에 대한 인식상태, 자기상, 성격, 왜곡, 소통중의 방어기재, 신경증 등을 살필 수 있습니다. 심리적인 공포감, 불안감, 정서 상태가 보이기도 하며 지능수준, 현실감, 자기통제력, 대인에 대한 관심도를 알 수 있습니다.</li>
+      </ul>
     </div>
   </section>
 
