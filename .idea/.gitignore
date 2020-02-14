@@ -2,3 +2,10 @@
 /workspace.xml
 # Datasource local storage ignored files
 /dataSources.local.xml
+# virtual env
+../maeum/
+# analysis model
+../utils/
+../1025_person_frcnn_bs1_4000_graph/
+../1025_rcnn_house_4000_bs1_plus/
+..1028_rcnn_tree_4000_bs1_plus/

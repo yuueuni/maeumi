@@ -1,13 +1,8 @@
 import numpy as np
 import os
-import six.moves.urllib as urllib
 import sys
-import tarfile
 import tensorflow as tf
-import zipfile
 from distutils.version import StrictVersion
-from collections import defaultdict
-from io import StringIO
 from matplotlib import pyplot as plt
 from PIL import Image
 from utils import label_map_util
@@ -17,7 +12,6 @@ from django.views.decorators.csrf import csrf_exempt
 import cv2
 from datetime import datetime
 import pandas as pd
-import json
 
 
 @csrf_exempt
