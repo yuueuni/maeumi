@@ -8,7 +8,7 @@ from time import sleep
 import json
 from datetime import datetime
 from .models import *
-from collections import Counter
+from django.shortcuts import get_object_or_404
 
 
 # Create your views here.
@@ -20,8 +20,7 @@ def inputImage(request):
     return render(request, 'analysis/inputImage.html')
 
 
-num = 1;
-now = datetime.now()
+num = 1
 
 
 @csrf_exempt
@@ -34,9 +33,6 @@ def getPic(request):
         perLo = handle_upload_file(request.FILES['person'], 'person', str(num))
         # SLEEP 1초(파일 저장시간)
         sleep(1)
-        global now
-        print(now)
-        # 사진이 있는지 확인
         # 분석 모델 시작
         result1 = getHouseLabel(str(num))
         result2 = getTreeLabel(str(num))
@@ -66,9 +62,9 @@ def getLabelHTP(labelname):
              "<ul style=\"line-height: 200%; text-align: justify; font-size: larger;\">"
     label = list(set(labelname['class']))
 
-    for v in label:
+    for _ in label:
         labelEng = label[dnum]
-        data = Label.objects.get(label_eng=labelEng)
+        data = get_object_or_404(Label, label_eng=labelEng)
         labelContent = data.content
         result += "<li>" + labelContent + "</li>"
         dnum += 1
