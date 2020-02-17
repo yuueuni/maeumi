@@ -12,10 +12,6 @@ from django.shortcuts import get_object_or_404
 
 
 # Create your views here.
-def imgLabel(request):
-    return render(request, 'analysis/imgLabel.html')
-
-
 def inputImage(request):
     return render(request, 'analysis/inputImage.html')
 

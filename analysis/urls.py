@@ -6,5 +6,4 @@ app_name = 'analysis'
 urlpatterns = [
     path('getPic/', views.getPic),
     path('inputImage/', views.inputImage, name='inputImage'),
-    path('imgLabel/', views.imgLabel, name='imgLabel'),
 ]
