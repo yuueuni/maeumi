@@ -27,7 +27,7 @@ def getHouseLabel(number):
     MODEL_FILE = MODEL_NAME + '.tar.gz'
     DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
     # Path to frozen detection graph. This is the actual model that is used for the object detection.
-    PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/frozen_inference_graph.pb'
+    PATH_TO_FROZEN_GRAPH = '/home/ubuntu/IITP_Project/analysis/' + MODEL_NAME + '/frozen_inference_graph.pb'
     # List of the strings that is used to add correct label for each box.
     PATH_TO_LABELS = os.path.join('1025_rcnn_house_4000_bs1_plus', 'object-detection.pbtxt')
     NUM_CLASSES = 14
